@@ -21,3 +21,4 @@ struct Persona{
     var avatar: Image
     var description: String
 }
+

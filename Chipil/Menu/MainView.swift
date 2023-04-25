@@ -56,9 +56,9 @@ struct MainView: View {
                                 ShowMenu.toggle()
                             }
                         }, label: {
-                            Image(systemName: "person.fill")
+                            Image("btnflecha").resizable().frame(width: 150, height: 150)
                         })
-                        .padding(),alignment: .topLeading
+                        .padding(),alignment:.bottom
                     )
            
 

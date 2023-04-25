@@ -22,10 +22,7 @@ struct home_Menu: View {
             
             
             inicio()
-                .tag("fgb")
-            
-        
-           
+            //Text("holaaaaaa chipil")
         }
        
     }
@@ -43,29 +40,32 @@ struct inicio: View{
     var body: some View{
         NavigationStack{
             ZStack{
-                Color("blue_1").opacity(0.3).edgesIgnoringSafeArea(.all)//cambiar de color en fondo
+                Color("blue_1").opacity(1).edgesIgnoringSafeArea(.all)//cambiar de color en fondo
+                VStack{
+                    Image("portada").frame(width: 300, height: 300).offset(x: 0,y: -400).shadow(radius: 10)
+                }
+                ZStack{
+                    Image("pie_de_pagina").frame(width: 300, height: 300).offset(x: 0,y: 300).shadow(radius: 5)
+                }
                     HStack{
                         VStack(alignment: .leading , spacing: -10){
                             
                             NavigationLink{
                                 ListView_1()
                             }label: {
-                                RowView(Ximena: Persona(id: 2, avatar: Image("ansiedad"), description: "ANSIEDAD"))
+                                RowView(Ximena: Persona(id: 2, avatar: Image("ansiedadF"), description: "ANSIEDAD"))
                             }
-                            
-                            
-                            
                             
                             NavigationLink{
                                 ListView_4()
                             }label: {
-                                RowView(Ximena: Persona(id: 2, avatar: Image( "tda"), description: "TDA"))
+                                RowView(Ximena: Persona(id: 2, avatar: Image( "tdaF"), description: "TDA"))
                             }
                             
                             NavigationLink{
                                 ListView_5()
                             }label: {
-                                RowView(Ximena: Persona(id: 2, avatar: Image("bipolaridad"), description: "BIPOLARIDAD"))
+                                RowView(Ximena: Persona(id: 2, avatar: Image("bipolaridadF"), description: "BIPOLARIDAD"))
                             }
                         }
                         
@@ -73,25 +73,27 @@ struct inicio: View{
                             NavigationLink{
                                 ListView_2()
                             }label: {
-                                RowView(Ximena: Persona(id: 2, avatar: Image("depresion"), description: "DEPRESION"))
+                                RowView(Ximena: Persona(id: 2, avatar: Image("depresionF"), description: "DEPRESION"))
                             }
                             
                             NavigationLink{
                                 ListView_3()
                             }label: {
-                                RowView(Ximena: Persona(id: 2, avatar: Image( "sustancias"), description: "ABUSO DE "))
+                                RowView(Ximena: Persona(id: 2, avatar: Image( "sustanciasF"), description: "ABUSO DE "))
                             }
                             
                             NavigationLink{
                                 ListView_1()
                             }label: {
-                                RowView(Ximena: Persona(id: 2, avatar: Image( "esquizofrenia"), description: "ESQUIZO"))
+                                RowView(Ximena: Persona(id: 2, avatar: Image( "esquizofreniaF"), description: "ESQUIZO"))
                             }
+                            
                         }
-                    }
-                    
-                }//vstak
+                       
+                    }.background(Color("fondo_2"))
                 
+               
+                }//vstak
         }
     }
 }

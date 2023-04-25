@@ -11,21 +11,25 @@ struct Portada: View {
     var body: some View {
         NavigationStack{
             ZStack{
-            Color("blue_1").opacity(0.3).edgesIgnoringSafeArea(.all)//cambiar
-            VStack{
-                Image("Chípil").resizable().frame(width: 200,height: 370)
-                Image("nombre_n").resizable().frame(width: 280,height: 100)
-               
-                    NavigationLink{
-                        MainView()
-                    } label: {
-                        Image(systemName: "arrow.right")
-                            .foregroundColor(Color.green)
-                            .font(.system(size: 40, weight: .bold))
-                            .padding()
-                            .shadow(color: .white, radius:1)
+            Color("blue_1").opacity(1).edgesIgnoringSafeArea(.all)//cambiar
+                VStack{
+                    
+                    VStack{
+                       
+                        Image("chipilF").resizable().frame(width: 370,height: 370)
+                        Image("nombre_b").resizable().frame(width: 280,height: 100)
                         
-                            .navigationTitle(" ")
+                        NavigationLink{
+                            MainView()
+                        } label: {
+                            Image(systemName: "arrow.right")
+                                .foregroundColor(Color.green)
+                                .font(.system(size: 70, weight: .bold))
+                                .padding()
+                                .shadow(color: .white, radius:1)
+                            
+                                .navigationTitle(" ")
+                        }
                     }
                 }
             }

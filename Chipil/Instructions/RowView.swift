@@ -27,9 +27,10 @@ struct RowView: View {
                         .font(.system(size: 20, weight: .light, design: .serif))
                             .italic()
                         .foregroundColor(Color.black)
+                        .shadow(radius: 5)
                     
                 }//Cierre Vstack
-                Spacer()
+                
             }//Cierre Hstack
             .padding()
         }//Cierre Zstack

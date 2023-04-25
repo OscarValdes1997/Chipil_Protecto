@@ -9,19 +9,30 @@ import SwiftUI
 
 struct Credenciales: View {
     var body: some View {
-        VStack{
-            Image("FESA").resizable().aspectRatio( contentMode: .fill)
-                .frame(width: 300, height: 300)
-        
+        ZStack{
+            Color.white.edgesIgnoringSafeArea(.all)
+            VStack{
+                Image("FESA").resizable().aspectRatio( contentMode: .fill)
+                    .frame(width: 300, height: 300)
+                    .shadow(radius: 5)
+                
                 Divider()
                 Text("Diseñadora grafica").font(.title).fontWeight(.black)
+                    .foregroundColor(Color.blue)
+                    .shadow(radius: 5)
                 Text("Avilez Pedroza ivon Dulce Anahí")
                     .fontWeight(.bold)
+                    .foregroundColor(Color.blue)
                 Divider()
                 Text("Programadores").font(.title).fontWeight(.black)
+                    .foregroundColor(Color.blue)
+                    .shadow(radius: 5)
                 Text("Mejia Jacobo Ximena Juana").fontWeight(.bold)
+                    .foregroundColor(Color.blue)
                 Text("Valdes Rodriguez Oscar Roberto").fontWeight(.bold)
-          
+                    .foregroundColor(Color.blue)
+                
+            }
         }
     }
 }

@@ -13,11 +13,11 @@ struct RowView_1: View {
     var body: some View {
         HStack{
             
-            RowInstrucciones.avatar.resizable().frame(width: 50 , height: 50).clipShape(Circle())
+            RowInstrucciones.avatar.resizable().frame(width: 60 , height: 60).clipShape(Circle())
                 .padding()
             VStack(alignment:. leading){
                 Text(RowInstrucciones.titulo)
-                    .font(.title)
+                    .font(.title2)
             }
             Spacer()
         }//llave del Hstack

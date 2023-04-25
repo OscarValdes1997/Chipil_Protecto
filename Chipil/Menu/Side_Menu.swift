@@ -17,16 +17,17 @@ struct Side_Menu: View {
             //Imagen del menu
             Image("Chipil_117")
                 .resizable().aspectRatio( contentMode: .fill)
-                .frame(width: 70, height: 130)
-                .cornerRadius(10)
-                .padding(.top,50)
+                .frame(width: 80, height: 140)
+                .cornerRadius(30)
+                .padding(.top,30)
+                .shadow(color: .white, radius:10)
             
             VStack(alignment: .leading, spacing: 6, content: {
                 Text("Chipil")
-                    .padding(.top, -10)
+                    .padding(.top, 10)
                     .font(.title)
                     .fontWeight(.heavy)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 
             })
             
@@ -34,26 +35,39 @@ struct Side_Menu: View {
                  self.isModal = true
              }.sheet(isPresented: $isModal, content: {
                  Credenciales()
-             }).foregroundColor(.black).opacity(0.4)
+             }).foregroundColor(.white).opacity(0.4)
                 .fontWeight(.semibold)
                 .padding(.top, -15)
             
             
             VStack(alignment: .leading, spacing: 5){
+
+                NavigationLink{
+                    LLAMADAS()
+                } label: {
+                    Image(systemName: "cross.case.fill").font(.system(size: 30, weight: .bold))
+                   Text("CRISIS      ")
+                }.fontWeight(.semibold)
+                    .foregroundColor(Color.black)
+                    .padding(.vertical,12)
+                    .padding(.horizontal,20)
+                    .background(.white)
+                    .cornerRadius(15)
+                NavigationLink{
+                    Mapas()
+                    
+                } label: {
+                    Image(systemName: "house.circle.fill").font(.system(size: 30, weight: .bold))
+                   Text("UBICANES")
+                }.fontWeight(.semibold)
+                    .foregroundColor(Color.black)
+                    .padding(.vertical,12)
+                    .padding(.horizontal,20)
+                    .background(.white)
+                    .cornerRadius(15)
                 
-                TabButton(image: Image(systemName: "person.circle"), title: "Inicio              ", animation: animation, selectedTab: $selectedTable)
                 
-                TabButton(image: Image(systemName: "person.circle"), title: "Anciedad      ", animation: animation, selectedTab: $selectedTable)
-                
-                TabButton(image: Image(systemName: "person.circle"), title: "Depresion     ", animation: animation, selectedTab: $selectedTable)
-                
-                TabButton(image: Image(systemName: "person.circle"), title: "Sustancias    ", animation: animation, selectedTab: $selectedTable)
-                
-                TabButton(image: Image(systemName: "person.circle"), title: "TDA                 ", animation: animation, selectedTab: $selectedTable)
-                
-                TabButton(image: Image(systemName: "person.circle"), title: "bipolaridad    ", animation: animation, selectedTab: $selectedTable)
-                
-                TabButton(image: Image(systemName: "person.circle"), title: "Esquizofrenia", animation: animation, selectedTab: $selectedTable)
+             
                 }
             .padding(.leading,-15)
             .padding(.top,50)
