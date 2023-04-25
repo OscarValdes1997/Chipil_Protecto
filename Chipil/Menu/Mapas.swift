@@ -12,6 +12,8 @@ struct Mapas: View {
         
         ZStack{
             Color("blue_1").opacity(1).edgesIgnoringSafeArea(.all)//cambiar de color en fondo
+            Image("portada2").shadow(radius: 5).offset(y: -350).opacity(0.5)
+            Image("ayudante").frame(width: 300, height: 300).offset(x: 0,y: 300).shadow(radius: 5).opacity(0.5)
             
             VStack{
                 VStack{

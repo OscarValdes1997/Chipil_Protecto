@@ -10,7 +10,7 @@ import SwiftUI
 struct Credenciales: View {
     var body: some View {
         ZStack{
-            Color.white.edgesIgnoringSafeArea(.all)
+            Color("blue_1").opacity(1).edgesIgnoringSafeArea(.all)//cambiar de color en fondo
             VStack{
                 Image("FESA").resizable().aspectRatio( contentMode: .fill)
                     .frame(width: 300, height: 300)
@@ -18,19 +18,16 @@ struct Credenciales: View {
                 
                 Divider()
                 Text("Diseñadora grafica").font(.title).fontWeight(.black)
-                    .foregroundColor(Color.blue)
                     .shadow(radius: 5)
                 Text("Avilez Pedroza ivon Dulce Anahí")
                     .fontWeight(.bold)
-                    .foregroundColor(Color.blue)
                 Divider()
                 Text("Programadores").font(.title).fontWeight(.black)
-                    .foregroundColor(Color.blue)
                     .shadow(radius: 5)
                 Text("Mejia Jacobo Ximena Juana").fontWeight(.bold)
-                    .foregroundColor(Color.blue)
+                   
                 Text("Valdes Rodriguez Oscar Roberto").fontWeight(.bold)
-                    .foregroundColor(Color.blue)
+                   
                 
             }
         }

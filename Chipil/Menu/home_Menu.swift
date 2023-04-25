@@ -40,12 +40,17 @@ struct inicio: View{
     var body: some View{
         NavigationStack{
             ZStack{
+               
                 Color("blue_1").opacity(1).edgesIgnoringSafeArea(.all)//cambiar de color en fondo
                 VStack{
+                    
                     Image("portada").frame(width: 300, height: 300).offset(x: 0,y: -400).shadow(radius: 10)
                 }
                 ZStack{
+                    
                     Image("pie_de_pagina").frame(width: 300, height: 300).offset(x: 0,y: 300).shadow(radius: 5)
+                    
+                    
                 }
                     HStack{
                         VStack(alignment: .leading , spacing: -10){
@@ -92,6 +97,8 @@ struct inicio: View{
                        
                     }.background(Color("fondo_2"))
                 
+                
+               
                
                 }//vstak
         }
